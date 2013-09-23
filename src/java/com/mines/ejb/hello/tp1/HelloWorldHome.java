@@ -14,6 +14,6 @@ import javax.ejb.EJBHome;
  *
  * @author xtalandier
  */
-public interface HelloWorldHome extends EJBHome{
+public interface HelloWorldHome extends EJBHome {
 	HelloWorld create() throws RemoteException, CreateException;
 }
