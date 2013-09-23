@@ -31,9 +31,9 @@ public class CalculetteClient {
 			Logger.getLogger(Client.class.getName()).log(Level.SEVERE, null, ex);
 		}
 		
-		CalculetteBean calc = null;
+		ICalculette calc = null;
 		try {
-			calc = home.create(0);
+			calc = home.create();
 			calc.add(1 , 3);
 			calc.mPlus();// <- 4
 			calc.less(4 , 5); // <- -1
