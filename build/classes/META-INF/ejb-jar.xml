@@ -14,11 +14,28 @@
 			<session-type>Stateless</session-type>
 			<transaction-type>Container</transaction-type>
 		</session>
+		<session>
+			<description>Descripter deploiement Calculette</description>
+			<display-name>Calculette</display-name>
+			<ejb-name>Calculette</ejb-name>
+			<home>com.mines.ejb.calculette.CalculetteHome</home>
+			<remote>com.mines.ejb.calculette.ICalculette</remote>
+			<ejb-class>com.mines.ejb.calculette.CalculetteBean</ejb-class>
+			<session-type>Stateful</session-type>
+			<transaction-type>Container</transaction-type>
+		</session>
 	</enterprise-beans>
 	<assembly-descriptor>
 		<container-transaction>
 			<method>
 				<ejb-name>HelloWorld</ejb-name>
+				<method-name>*</method-name>
+			</method>
+			<trans-attribute>Required</trans-attribute>
+		</container-transaction>
+		<container-transaction>
+			<method>
+				<ejb-name>Calculette</ejb-name>
 				<method-name>*</method-name>
 			</method>
 			<trans-attribute>Required</trans-attribute>

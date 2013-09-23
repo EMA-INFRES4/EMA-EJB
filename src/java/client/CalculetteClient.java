@@ -26,14 +26,14 @@ public class CalculetteClient {
 		}
 		CalculetteHome home = null;
 		try {
-			home = (CalculetteHome) initialContext.lookup("java:global/EJB/HelloWorld!com.mines.ejb.calculette.CalculetteHome");
+			home = (CalculetteHome) initialContext.lookup("java:global/EJB/Calculette!com.mines.ejb.calculette.CalculetteHome");
 		} catch (NamingException ex) {
 			Logger.getLogger(Client.class.getName()).log(Level.SEVERE, null, ex);
 		}
 		
 		CalculetteBean calc = null;
 		try {
-			calc = (CalculetteBean) home.create(0);
+			calc = home.create(0);
 			calc.add(1 , 3);
 			calc.mPlus();// <- 4
 			calc.less(4 , 5); // <- -1
