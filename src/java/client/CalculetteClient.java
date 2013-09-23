@@ -34,10 +34,10 @@ public class CalculetteClient {
 		ICalculette calc = null;
 		try {
 			calc = home.create();
-			calc.add(1 , 3);
-			calc.mPlus();// <- 4
-			calc.less(4 , 5); // <- -1
-			System.out.println(calc.mPlus()); // <- 3
+			System.out.println("1 + 3 = " + calc.add(1 , 3));
+			System.out.println("M+ = " + calc.mPlus());// <- 4
+			System.out.println("4 - 5 = " + calc.less(4 , 5)); // <- -1
+			System.out.println("M + -1" + calc.mPlus()); // <- 3
 			//System.out.println(myHelloWorld.sayHelloWorld());
 		} catch (RemoteException ex) {
 			Logger.getLogger(Client.class.getName()).log(Level.SEVERE, null, ex);
